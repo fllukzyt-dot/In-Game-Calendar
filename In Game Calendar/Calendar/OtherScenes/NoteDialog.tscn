@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://beafkt1xjkivk"]
+
+[ext_resource type="Script" uid="uid://dgjtf11mtahmg" path="res://addons/In Game Calendar/Calendar/OtherScenes/NoteDialog.gd" id="1_dqn2b"]
+[ext_resource type="LabelSettings" uid="uid://f8u7dhqdd61g" path="res://addons/In Game Calendar/Calendar/Resources/LabelSettingBig.tres" id="2_jg1iw"]
+[ext_resource type="Theme" uid="uid://bxgmder5bm31h" path="res://addons/In Game Calendar/Calendar/Resources/Theme.tres" id="3_ys1yi"]
+
+[node name="Window" type="Window"]
+transparent_bg = true
+oversampling_override = 1.0
+size = Vector2i(600, 350)
+unresizable = true
+transparent = true
+theme = ExtResource("3_ys1yi")
+script = ExtResource("1_dqn2b")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Names" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Label4" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Names"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Note:  "
+label_settings = ExtResource("2_jg1iw")
+vertical_alignment = 1
+
+[node name="Value" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NoteEdit" type="TextEdit" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Value"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme = ExtResource("3_ys1yi")
+placeholder_text = " Note"
+wrap_mode = 1
+caret_blink = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_ys1yi")
+text = "Save"
+
+[node name="DeleteButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_ys1yi")
+text = "Delete"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_ys1yi")
+text = "Cancel"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]

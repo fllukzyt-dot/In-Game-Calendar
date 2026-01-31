@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuxdeep70x4x8"]
+
+[ext_resource type="Theme" uid="uid://bxgmder5bm31h" path="res://addons/In Game Calendar/Calendar/Resources/Theme.tres" id="1_5vjql"]
+[ext_resource type="Script" uid="uid://ck438wpnst6ho" path="res://addons/In Game Calendar/Calendar/OtherScenes/Event Pannel.gd" id="1_b2nof"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5vjql")
+text = "O | 1st Event →"
+script = ExtResource("1_b2nof")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

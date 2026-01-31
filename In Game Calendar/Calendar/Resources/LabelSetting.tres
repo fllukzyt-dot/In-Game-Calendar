@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bgmong5bgkk4e"]
+
+[ext_resource type="FontFile" uid="uid://d0684swyadc76" path="res://addons/In Game Calendar/Calendar/Resources/BoldPixels.ttf" id="1_jop6k"]
+
+[resource]
+font = ExtResource("1_jop6k")

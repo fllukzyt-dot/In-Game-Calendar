@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://f8u7dhqdd61g"]
+
+[ext_resource type="FontFile" uid="uid://d0684swyadc76" path="res://addons/In Game Calendar/Calendar/Resources/BoldPixels.ttf" id="1_gcxl3"]
+
+[resource]
+font = ExtResource("1_gcxl3")
+font_size = 32

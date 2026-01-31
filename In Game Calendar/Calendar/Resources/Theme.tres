@@ -1,0 +1,107 @@
+[gd_resource type="Theme" load_steps=25 format=3 uid="uid://bxgmder5bm31h"]
+
+[ext_resource type="FontFile" uid="uid://d0684swyadc76" path="res://addons/In Game Calendar/Calendar/Resources/BoldPixels.ttf" id="1_f4jly"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dr7up"]
+bg_color = Color(0, 0, 0, 0.25490198)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x81h5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ner5d"]
+bg_color = Color(0, 0, 0, 0.25490198)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etq5l"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo55d"]
+bg_color = Color(0, 0, 0, 0.31764707)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5rkoa"]
+bg_color = Color(0, 0, 0, 0.48235294)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8he7t"]
+bg_color = Color(0, 0, 0, 0.8156863)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0lmy"]
+bg_color = Color(0, 0, 0, 0.7019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as7lk"]
+bg_color = Color(0, 0.9411765, 0, 0.16862746)
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 0.25490198)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k4prl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08rs7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x81h5"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mef3y"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08rs7"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4prl"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1fex"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfjj6"]
+bg_color = Color(0, 0, 0, 0.25490198)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8its"]
+bg_color = Color(0, 0, 0, 0.25490198)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6umly"]
+bg_color = Color(0.7038074, 0.703808, 0.70380765, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mef3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83e52"]
+bg_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1b1k"]
+bg_color = Color(0.2784314, 0.2784314, 0.2784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ko34"]
+bg_color = Color(0.2784314, 0.2784314, 0.2784314, 1)
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_f4jly")
+Button/styles/disabled = SubResource("StyleBoxFlat_dr7up")
+Button/styles/focus = SubResource("StyleBoxEmpty_x81h5")
+Button/styles/hover = SubResource("StyleBoxFlat_ner5d")
+Button/styles/normal = SubResource("StyleBoxFlat_etq5l")
+Button/styles/pressed = SubResource("StyleBoxFlat_bo55d")
+ColorPickerButton/font_sizes/font_size = 32
+ColorPickerButton/fonts/font = ExtResource("1_f4jly")
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_5rkoa")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_8he7t")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_m0lmy")
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_as7lk")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_k4prl")
+LineEdit/font_sizes/font_size = 32
+LineEdit/fonts/font = ExtResource("1_f4jly")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_08rs7")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_x81h5")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_mef3y")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxFlat_08rs7")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_k4prl")
+OptionButton/styles/pressed_mirrored = SubResource("StyleBoxFlat_t1fex")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_kfjj6")
+ProgressBar/font_sizes/font_size = 24
+ProgressBar/fonts/font = ExtResource("1_f4jly")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_k8its")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_6umly")
+TextEdit/font_sizes/font_size = 32
+TextEdit/fonts/font = ExtResource("1_f4jly")
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_mef3y")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_83e52")
+Window/font_sizes/title_font_size = 32
+Window/fonts/title_font = ExtResource("1_f4jly")
+Window/styles/embedded_border = SubResource("StyleBoxFlat_x1b1k")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_3ko34")

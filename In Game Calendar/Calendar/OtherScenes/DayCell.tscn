@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=3 uid="uid://du0di3uocsine"]
+
+[ext_resource type="Theme" uid="uid://bxgmder5bm31h" path="res://addons/In Game Calendar/Calendar/Resources/Theme.tres" id="1_7mjdu"]
+[ext_resource type="Script" uid="uid://gbf2n20b8wi" path="res://addons/In Game Calendar/Calendar/OtherScenes/DayCell.gd" id="1_isjfw"]
+[ext_resource type="LabelSettings" uid="uid://bgmong5bgkk4e" path="res://addons/In Game Calendar/Calendar/Resources/LabelSetting.tres" id="1_yvtwy"]
+[ext_resource type="PackedScene" uid="uid://y2h6ku12ot3p" path="res://addons/In Game Calendar/Calendar/OtherScenes/EventDialog.tscn" id="2_pfmht"]
+[ext_resource type="FontFile" uid="uid://d0684swyadc76" path="res://addons/In Game Calendar/Calendar/Resources/BoldPixels.ttf" id="2_wbm5x"]
+[ext_resource type="PackedScene" uid="uid://c52y6rjao1use" path="res://addons/In Game Calendar/Calendar/OtherScenes/MilestoneDialog.tscn" id="3_7mjdu"]
+[ext_resource type="PackedScene" uid="uid://beafkt1xjkivk" path="res://addons/In Game Calendar/Calendar/OtherScenes/NoteDialog.tscn" id="4_1x0qx"]
+[ext_resource type="PackedScene" uid="uid://d1whag3r8llsg" path="res://addons/In Game Calendar/Calendar/OtherScenes/DayEditor.tscn" id="6_1x0qx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l576c"]
+font = ExtResource("2_wbm5x")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbm5x"]
+font = ExtResource("2_wbm5x")
+font_size = 48
+
+[node name="DayCell" type="Control"]
+custom_minimum_size = Vector2(130, 150)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_7mjdu")
+script = ExtResource("1_isjfw")
+event_dialog_scene = ExtResource("2_pfmht")
+milestone_dialog_scene = ExtResource("3_7mjdu")
+note_dialog_scene = ExtResource("4_1x0qx")
+day_manager_scene = ExtResource("6_1x0qx")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+theme = ExtResource("1_7mjdu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Day Count" type="Label" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Day 1"
+label_settings = SubResource("LabelSettings_l576c")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Day Text" type="Label" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Monday"
+label_settings = ExtResource("1_yvtwy")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -6.0
+offset_right = -3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Day Num" type="Label" parent="PanelContainer/VBoxContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Fanuary 1"
+label_settings = ExtResource("1_yvtwy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Event" type="Label" parent="PanelContainer/VBoxContainer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Event"
+label_settings = ExtResource("1_yvtwy")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 10
+mouse_filter = 2
+theme = ExtResource("1_7mjdu")
+value = 48.36
+show_percentage = false
+
+[node name="Control" type="Control" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Bookmarkded" type="Label" parent="PanelContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 23.0
+offset_bottom = 43.0
+text = "⁕"
+label_settings = SubResource("LabelSettings_wbm5x")

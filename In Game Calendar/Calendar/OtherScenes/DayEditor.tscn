@@ -1,0 +1,194 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1whag3r8llsg"]
+
+[ext_resource type="Theme" uid="uid://bxgmder5bm31h" path="res://addons/In Game Calendar/Calendar/Resources/Theme.tres" id="1_blq1j"]
+[ext_resource type="Script" uid="uid://cdup2fxpf8f5" path="res://addons/In Game Calendar/Calendar/OtherScenes/DayEditor.gd" id="2_blq1j"]
+[ext_resource type="PackedScene" uid="uid://cuxdeep70x4x8" path="res://addons/In Game Calendar/Calendar/OtherScenes/Event Pannel.tscn" id="3_e2ac7"]
+[ext_resource type="LabelSettings" uid="uid://f8u7dhqdd61g" path="res://addons/In Game Calendar/Calendar/Resources/LabelSettingBig.tres" id="3_ykrbi"]
+[ext_resource type="PackedScene" uid="uid://y2h6ku12ot3p" path="res://addons/In Game Calendar/Calendar/OtherScenes/EventDialog.tscn" id="4_wpdkt"]
+
+[node name="Window" type="Window"]
+oversampling_override = 1.0
+title = "Day - 8"
+position = Vector2i(0, 36)
+size = Vector2i(600, 830)
+unresizable = true
+maximize_disabled = true
+theme = ExtResource("1_blq1j")
+script = ExtResource("2_blq1j")
+event_scene = ExtResource("3_e2ac7")
+event_dialog_scene = ExtResource("4_wpdkt")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Bookmark Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_blq1j")
+text = " ⁕ Add BookMark ⁕ "
+
+[node name="Events" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Events :"
+label_settings = ExtResource("3_ykrbi")
+horizontal_alignment = 1
+
+[node name="AddEventButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "Add Event"
+
+[node name="Event Box" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Milestone Text" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Milestone :"
+label_settings = ExtResource("3_ykrbi")
+horizontal_alignment = 1
+
+[node name="Milestone" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Names" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Milestone"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Milestone/Names"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Name:  "
+label_settings = ExtResource("3_ykrbi")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/Milestone/Names"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Note:  "
+label_settings = ExtResource("3_ykrbi")
+vertical_alignment = 1
+
+[node name="Value" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Milestone"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Milestone Title" type="LineEdit" parent="MarginContainer/VBoxContainer/Milestone/Value"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_blq1j")
+placeholder_text = "Milestone Name"
+alignment = 1
+caret_blink = true
+
+[node name="Milestone Description" type="TextEdit" parent="MarginContainer/VBoxContainer/Milestone/Value"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_blq1j")
+placeholder_text = " Note"
+wrap_mode = 1
+caret_blink = true
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Note :"
+label_settings = ExtResource("3_ykrbi")
+horizontal_alignment = 1
+
+[node name="Note" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Note Edit" type="TextEdit" parent="MarginContainer/VBoxContainer/Note"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_blq1j")
+placeholder_text = " Note"
+wrap_mode = 1
+caret_blink = true
+
+[node name="Custom Colore" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "(No Alpha = no custom color)"
+mouse_filter = 1
+text = "Custom Color :"
+label_settings = ExtResource("3_ykrbi")
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Custom Color" type="ColorPickerButton" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_blq1j")
+text = "Custom Color"
+color = Color(1, 1, 1, 0)
+
+[node name="ResetColor" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = " X "
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_blq1j")
+text = "Save
+"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_blq1j")
+text = "Cancel"
+
+[node name="ResetDay" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("1_blq1j")
+text = "Reset"
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Bookmark Button" to="." method="_on_bookmark_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/SaveButton" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/CancelButton" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/ResetDay" to="." method="_on_cancel_pressed"]

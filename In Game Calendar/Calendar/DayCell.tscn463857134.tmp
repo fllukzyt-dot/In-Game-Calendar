@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://du0di3uocsine"]
+
+[ext_resource type="Script" uid="uid://gbf2n20b8wi" path="res://100 Days/DayCell.gd" id="1_isjfw"]
+[ext_resource type="LabelSettings" uid="uid://bgmong5bgkk4e" path="res://Game/Resources/UI/LabelSetting.tres" id="1_yvtwy"]
+[ext_resource type="FontFile" uid="uid://d0684swyadc76" path="res://Game/Resources/UI/BoldPixels.ttf" id="2_wbm5x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l576c"]
+font = ExtResource("2_wbm5x")
+font_size = 24
+
+[node name="DayCell" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_isjfw")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Day Count" type="Label" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Day 1"
+label_settings = SubResource("LabelSettings_l576c")
+horizontal_alignment = 1
+
+[node name="Day Num" type="Label" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "01/01"
+label_settings = ExtResource("1_yvtwy")
+horizontal_alignment = 1
+
+[node name="Day Text" type="Label" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+text = "Monday"
+label_settings = ExtResource("1_yvtwy")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.0
+value = 0.3
+show_percentage = false
