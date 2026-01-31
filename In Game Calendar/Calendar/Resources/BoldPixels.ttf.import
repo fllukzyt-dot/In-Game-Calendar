@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d0684swyadc76"
-path="res://.godot/imported/BoldPixels.ttf-5222504cb618db7602acc2d0f0b5f593.fontdata"
+path="res://.godot/imported/BoldPixels.ttf-899a9a76167b03cfad2cafa5444b3a17.fontdata"
 
 [deps]
 
-source_file="res://addons/In Game Calendar/Calendar/Resources/BoldPixels.ttf"
-dest_files=["res://.godot/imported/BoldPixels.ttf-5222504cb618db7602acc2d0f0b5f593.fontdata"]
+source_file="res://addons/In-Game-Calendar/In Game Calendar/Calendar/Resources/BoldPixels.ttf"
+dest_files=["res://.godot/imported/BoldPixels.ttf-899a9a76167b03cfad2cafa5444b3a17.fontdata"]
 
 [params]
 
